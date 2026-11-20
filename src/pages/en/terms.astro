@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro';
+import { APP, ROTAS } from '../../i18n';
+---
+
+<Base lingua="en" pagina="termos" titulo="Terms of Use" descricao="Terms of use for Selah: Enigmas da Bíblia.">
+  <article class="documento">
+    <h1>Terms of Use</h1>
+    <p class="data">{APP.nome} · Effective {APP.vigencia.en}</p>
+
+    <div class="resumo">
+      <p><strong>In short:</strong> Selah is free, with no purchases, no ads and no account. You may play as much as you like for personal use; the game is provided as is, and the Bible texts come from the Bíblia Livre.</p>
+    </div>
+
+    <h2>1. Acceptance</h2>
+    <p>These terms apply between you and <strong>{APP.responsavel}</strong> ({APP.cidade.en}), responsible for {APP.nome} ("Selah" or "the app"). By downloading or using the app, you agree to these terms and to the <a href={ROTAS.privacidade.en}>Privacy Policy</a>. If you do not agree, do not use the app. The Portuguese version of these terms prevails in case of any discrepancy.</p>
+
+    <h2>2. Who may use it</h2>
+    <p>Selah is intended for users aged 13 and over. Users under 18 should use the app with the knowledge of their parents or guardians.</p>
+
+    <h2>3. License</h2>
+    <p>We grant you a personal, free, non-exclusive, non-transferable and revocable license to download and use Selah on your devices for personal, non-commercial purposes. You may not copy, modify, distribute, sell, rent or reverse engineer the app, or use its content outside the app, except where the law allows it or where the license of specific content permits it (see section 5).</p>
+
+    <h2>4. Price, purchases and ads</h2>
+    <p>Selah is free. It has no in-app purchases, subscriptions or ads. If this changes in the future, these terms will be updated beforehand with the purchase and refund conditions.</p>
+
+    <h2>5. Content and intellectual property</h2>
+    <p>The app, the Selah brand, the puzzles, illustrations, sounds, music and original texts belong to {APP.responsavel} or are used under license.</p>
+    <p>The Bible texts come from the <strong>Bíblia Livre</strong> (2018), licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">Creative Commons Attribution 4.0 (CC BY 4.0)</a>. Other third-party licenses (fonts, word lexicon) are listed in the app under Settings › Credits and licenses.</p>
+    <p>The game's clues, questions and explanations are entertainment and study material. They do not replace reading the Bible or the guidance of a faith community, and do not represent the official position of any church or denomination.</p>
+
+    <h2>6. Proper use</h2>
+    <p>You agree not to use the app unlawfully, not to try to circumvent how it works, and not to use it to harm others.</p>
+
+    <h2>7. Your progress</h2>
+    <p>Your progress is stored only on your device (see the <a href={ROTAS.privacidade.en}>Privacy Policy</a>). Since there is no account or cloud backup, it may be lost if you uninstall the app, clear its data or change devices, and we cannot recover it.</p>
+
+    <h2>8. Warranties and liability</h2>
+    <p>Selah is provided "as is". We do our best for it to work well and for its content to be accurate, but we do not guarantee that the app will be error-free or always available. To the extent permitted by law, {APP.responsavel} is not liable for indirect damages arising from the use of, or inability to use, the app. Nothing in these terms limits your rights under applicable consumer protection law.</p>
+
+    <h2>9. Updates and discontinuation</h2>
+    <p>We may update, change or stop offering the app or parts of it. You may stop using Selah at any time by uninstalling it.</p>
+
+    <h2>10. App stores</h2>
+    <p>If you downloaded Selah from the App Store, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Licensed Application End User License Agreement (standard EULA)</a> also applies; in case of conflict, these terms prevail to the extent Apple allows. Apple and Google are not responsible for the app or its support.</p>
+
+    <h2>11. Changes to these terms</h2>
+    <p>If these terms change, the new version will be published on this page with an updated date. Continuing to use the app after the change means you accept the new version.</p>
+
+    <h2>12. Governing law and venue</h2>
+    <p>These terms are governed by the laws of Brazil. The courts of Belo Horizonte, MG, Brazil, have jurisdiction, without prejudice to a consumer's right to sue in the courts of their own domicile.</p>
+
+    <h2>13. Contact</h2>
+    <p><a href={`mailto:${APP.email}`}>{APP.email}</a></p>
+  </article>
+</Base>

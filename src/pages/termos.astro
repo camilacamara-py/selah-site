@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import { APP, ROTAS } from '../i18n';
+---
+
+<Base lingua="pt" pagina="termos" titulo="Termos de Uso" descricao="Termos de uso do Selah: Enigmas da Bíblia.">
+  <article class="documento">
+    <h1>Termos de Uso</h1>
+    <p class="data">{APP.nome} · Em vigor desde {APP.vigencia.pt}</p>
+
+    <div class="resumo">
+      <p><strong>Em resumo:</strong> o Selah é gratuito, sem compras, sem anúncios e sem conta. Você pode jogar à vontade para uso pessoal; o jogo é oferecido como está, e os textos bíblicos são da Bíblia Livre.</p>
+    </div>
+
+    <h2>1. Aceitação</h2>
+    <p>Estes termos valem entre você e <strong>{APP.responsavel}</strong> ({APP.cidade.pt}), responsável pelo {APP.nome} ("Selah" ou "o app"). Ao baixar ou usar o app, você concorda com estes termos e com a <a href={ROTAS.privacidade.pt}>Política de Privacidade</a>. Se não concordar, não use o app.</p>
+
+    <h2>2. Quem pode usar</h2>
+    <p>O Selah é indicado para maiores de 13 anos. Menores de 18 anos devem usar o app com o conhecimento dos pais ou responsáveis.</p>
+
+    <h2>3. Licença de uso</h2>
+    <p>Concedemos a você uma licença pessoal, gratuita, não exclusiva, intransferível e revogável para baixar e usar o Selah nos seus aparelhos, para fins pessoais e não comerciais. Você não pode copiar, modificar, distribuir, vender, alugar, fazer engenharia reversa do app nem usar o conteúdo dele fora do app, exceto quando a lei permitir ou quando a licença de um conteúdo específico autorizar (veja o item 5).</p>
+
+    <h2>4. Preço, compras e anúncios</h2>
+    <p>O Selah é gratuito. Não tem compras dentro do app, assinaturas nem anúncios. Se isso mudar no futuro, estes termos serão atualizados antes, com as condições de compra e reembolso.</p>
+
+    <h2>5. Conteúdo e propriedade intelectual</h2>
+    <p>O app, a marca Selah, os enigmas, as ilustrações, os sons, as músicas e os textos originais pertencem a {APP.responsavel} ou são usados com licença.</p>
+    <p>Os textos bíblicos são da <strong>Bíblia Livre</strong> (2018), licenciada sob <a href="https://creativecommons.org/licenses/by/4.0/deed.pt_BR" rel="noopener">Creative Commons Atribuição 4.0 (CC BY 4.0)</a>. As demais licenças de terceiros (fontes, léxico de palavras) estão em Ajustes › Créditos e licenças, dentro do app.</p>
+    <p>As pistas, perguntas e explicações do jogo são material de entretenimento e estudo. Elas não substituem a leitura da Bíblia nem a orientação de uma comunidade de fé, e não representam a posição oficial de nenhuma igreja ou denominação.</p>
+
+    <h2>6. Uso adequado</h2>
+    <p>Você concorda em não usar o app de forma ilegal, não tentar contornar o funcionamento dele e não usá-lo para prejudicar outras pessoas.</p>
+
+    <h2>7. Seu progresso</h2>
+    <p>O progresso fica guardado só no seu aparelho (veja a <a href={ROTAS.privacidade.pt}>Política de Privacidade</a>). Como não há conta nem cópia na nuvem, ele pode ser perdido se você desinstalar o app, apagar os dados dele ou trocar de aparelho, e não temos como recuperá-lo.</p>
+
+    <h2>8. Garantias e responsabilidade</h2>
+    <p>O Selah é oferecido "no estado em que se encontra". Fazemos o possível para que funcione bem e para que o conteúdo esteja correto, mas não garantimos que o app estará livre de erros ou sempre disponível. Na medida permitida pela lei, {APP.responsavel} não se responsabiliza por danos indiretos decorrentes do uso ou da impossibilidade de uso do app. Nada nestes termos limita os direitos que você tem pelo Código de Defesa do Consumidor.</p>
+
+    <h2>9. Atualizações e encerramento</h2>
+    <p>Podemos atualizar, mudar ou deixar de oferecer o app ou partes dele. Você pode parar de usar o Selah a qualquer momento, desinstalando-o.</p>
+
+    <h2>10. Lojas de aplicativos</h2>
+    <p>Se você baixou o Selah na App Store, também valem os <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">termos de licença padrão da Apple para apps (EULA)</a>; se houver conflito, prevalecem estes termos naquilo que a Apple permitir. A Apple e o Google não são responsáveis pelo app nem pelo suporte dele.</p>
+
+    <h2>11. Mudanças nestes termos</h2>
+    <p>Se estes termos mudarem, a nova versão será publicada nesta página com a data atualizada. Continuar usando o app depois da mudança significa aceitar a nova versão.</p>
+
+    <h2>12. Lei e foro</h2>
+    <p>Estes termos seguem as leis do Brasil. Fica eleito o foro da comarca de Belo Horizonte, MG, ressalvado o direito do consumidor de propor ação no foro do seu domicílio.</p>
+
+    <h2>13. Contato</h2>
+    <p><a href={`mailto:${APP.email}`}>{APP.email}</a></p>
+  </article>
+</Base>

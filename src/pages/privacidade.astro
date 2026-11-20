@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import { APP, ROTAS } from '../i18n';
+---
+
+<Base lingua="pt" pagina="privacidade" titulo="Política de Privacidade" descricao="Política de privacidade do Selah: Enigmas da Bíblia. O app não coleta, envia nem compartilha dados pessoais.">
+  <article class="documento">
+    <h1>Política de Privacidade</h1>
+    <p class="data">{APP.nome} · Em vigor desde {APP.vigencia.pt}</p>
+
+    <div class="resumo">
+      <p><strong>Em resumo:</strong> o Selah não coleta, não envia e não compartilha nenhum dado pessoal. Não tem conta, anúncios, rastreamento nem compras. Tudo o que o jogo guarda fica só no seu aparelho.</p>
+    </div>
+
+    <h2>1. Quem é o responsável</h2>
+    <p>O {APP.nome} ("Selah" ou "o app") é um jogo de enigmas bíblicos para iPhone e Android, desenvolvido e publicado por <strong>{APP.responsavel}</strong>, de {APP.cidade.pt}. Esta política explica como o app trata as suas informações, conforme a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018) e as regras da App Store e do Google Play.</p>
+
+    <h2>2. Dados que coletamos</h2>
+    <p>Nenhum. O app não pede nome, e-mail, telefone, localização, contatos, fotos nem qualquer outra informação pessoal, e não cria conta.</p>
+    <p>O Selah não usa ferramentas de análise, de publicidade nem de rastreamento de terceiros, e não acessa o identificador de publicidade do aparelho.</p>
+
+    <h2>3. O que fica guardado no seu aparelho</h2>
+    <p>Para o jogo funcionar, o app guarda localmente, só no seu aparelho:</p>
+    <ul>
+      <li>o seu progresso: fases concluídas, estrelas, peças do Templo e cartões da coleção;</li>
+      <li>os seus ajustes: som, música, vibração, tamanho do texto, lembrete diário e opções de acessibilidade;</li>
+      <li>estatísticas de jogo, como tempo e acertos por fase, usadas só para ajustar a dificuldade dos enigmas ao seu ritmo.</li>
+    </ul>
+    <p>Essas informações nunca saem do aparelho: não são enviadas para nós nem para ninguém. Veja como apagá-las em <a href={ROTAS.excluir.pt}>Excluir dados</a>.</p>
+
+    <h2>4. Notificações</h2>
+    <p>O Selah pode enviar no máximo um lembrete por dia, e só se você ligar essa opção nos Ajustes e der permissão. Os lembretes são criados e agendados no próprio aparelho: nenhum servidor envia notificações e nenhum dado sai do aparelho para isso. Você pode desligá-los a qualquer momento no app ou nos ajustes do sistema.</p>
+
+    <h2>5. Permissões</h2>
+    <p>O app não usa câmera, microfone, localização, contatos, fotos nem arquivos do aparelho. Ele usa apenas:</p>
+    <ul>
+      <li><strong>notificações</strong>, para o lembrete diário opcional;</li>
+      <li><strong>vibração</strong>, como resposta aos toques (pode ser desligada nos Ajustes);</li>
+      <li><strong>áudio</strong>, para tocar a música e os sons do jogo enquanto o app está aberto.</li>
+    </ul>
+
+    <h2>6. Compartilhamento</h2>
+    <p>Como não coletamos dados, não há nada a vender, compartilhar ou transferir a terceiros.</p>
+    <p>A Apple e o Google, que distribuem o app, podem tratar dados sobre o download e o uso das lojas e do sistema conforme as políticas de privacidade deles (por exemplo, relatórios de falhas que você aceita enviar nos ajustes do aparelho). Esses dados são tratados por eles, não pelo Selah.</p>
+
+    <h2>7. Este site</h2>
+    <p>Este site é estático: não usa cookies, formulários, ferramentas de análise nem rastreamento. A empresa que hospeda o site pode registrar dados técnicos de acesso (como endereço IP) por segurança, conforme a política dela.</p>
+
+    <h2>8. Crianças e adolescentes</h2>
+    <p>O Selah é indicado para maiores de 13 anos e não é direcionado a crianças menores de 13. Como o app não coleta dados pessoais de nenhum usuário, também não coleta dados de crianças nem de adolescentes.</p>
+
+    <h2>9. Seus direitos</h2>
+    <p>A LGPD garante a você o direito de saber se tratamos dados seus, de acessá-los, corrigi-los e pedir a exclusão. Como o Selah não coleta nem guarda dados pessoais fora do seu aparelho, não temos dados seus para consultar, corrigir ou apagar. O que existe fica sob o seu controle, no aparelho.</p>
+
+    <h2>10. Mudanças nesta política</h2>
+    <p>Se esta política mudar, a nova versão será publicada nesta página, com a data de vigência atualizada. Se uma versão futura do app passar a tratar algum dado, isso será explicado aqui antes da mudança.</p>
+
+    <h2>11. Contato</h2>
+    <p>Dúvidas sobre esta política ou sobre privacidade no Selah: <a href={`mailto:${APP.email}`}>{APP.email}</a>.</p>
+  </article>
+</Base>

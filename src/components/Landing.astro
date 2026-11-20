@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+import { APP, ROTAS, type Lingua } from '../i18n';
+
+interface Props {
+  lingua: Lingua;
+}
+const { lingua } = Astro.props;
+
+const T = {
+  pt: {
+    descricao: 'Selah é um jogo de enigmas bíblicos em português: 14 tipos de puzzle em 12 temas, da Criação ao Apocalipse. Sem anúncios, sem vidas, sem pressa.',
+    chamada: '"Selah" é a pausa dos Salmos: o convite para parar e pensar.',
+    texto: 'Em Selah você para, pensa e descobre a Bíblia em 14 tipos de enigma, em 12 temas, da Criação ao Apocalipse. Cada estrela ergue uma pedra do Templo de Salomão.',
+    emBreve: 'Em breve',
+    lojas: 'Em breve na App Store e no Google Play',
+    recursosTitulo: 'O que tem no Selah',
+    recursos: [
+      { t: '14 tipos de enigma', d: 'Palavras cruzadas, caça-palavras, sudoku das doze pedras, combinar 3, quebra-cabeças, perguntas e mais.' },
+      { t: '12 temas, 360 fases', d: 'Da Criação ao Apocalipse, com versículos da Bíblia Livre em cada fase.' },
+      { t: 'O Templo de Salomão', d: 'Cada estrela conquistada ergue uma pedra do Templo, do alicerce ao santuário.' },
+      { t: 'Desafio do dia', d: 'Um enigma novo por dia para quem gosta de rotina, sem cobrança se faltar um dia.' },
+      { t: 'Sem anúncios e sem vidas', d: 'Jogue no seu ritmo: sem contagem regressiva, sem caixas de sorte, sem compras.' },
+      { t: 'Seus dados ficam com você', d: 'Sem conta e sem coleta de dados: o progresso fica só no seu aparelho.' },
+    ],
+    idioma: '',
+    suporte: 'Dúvidas ou sugestões?',
+    suporteLink: 'Fale com a gente',
+  },
+  en: {
+    descricao: 'Selah is a Bible puzzle game in Brazilian Portuguese: 14 kinds of puzzles across 12 themes, from Creation to Revelation. No ads, no lives, no rush.',
+    chamada: '"Selah" is the pause of the Psalms: an invitation to stop and think.',
+    texto: 'In Selah you stop, think and discover the Bible through 14 kinds of puzzles across 12 themes, from Creation to Revelation. Every star raises a stone of Solomon\'s Temple.',
+    emBreve: 'Coming soon',
+    lojas: 'Coming soon to the App Store and Google Play',
+    recursosTitulo: 'What\'s inside',
+    recursos: [
+      { t: '14 kinds of puzzles', d: 'Crosswords, word search, the twelve-stones sudoku, match-3, jigsaws, quizzes and more.' },
+      { t: '12 themes, 360 levels', d: 'From Creation to Revelation, with verses from the Bíblia Livre in every level.' },
+      { t: 'Solomon\'s Temple', d: 'Every star you earn raises a stone of the Temple, from the foundation to the sanctuary.' },
+      { t: 'Daily challenge', d: 'A new puzzle every day for those who like a routine, with no penalty for missing a day.' },
+      { t: 'No ads, no lives', d: 'Play at your own pace: no fake countdowns, no loot boxes, no purchases.' },
+      { t: 'Your data stays with you', d: 'No account and no data collection: your progress stays on your device.' },
+    ],
+    idioma: 'The app is available in Brazilian Portuguese.',
+    suporte: 'Questions or suggestions?',
+    suporteLink: 'Get in touch',
+  },
+}[lingua];
+---
+
+<Base lingua={lingua} pagina="inicio" titulo={APP.nome} descricao={T.descricao}>
+  <section class="heroi">
+    <div class="faixa">
+      <img class="logo" src="/img/logo.webp" alt={APP.nome} width="600" height="300" />
+      <p class="lema">{APP.lema[lingua]}</p>
+      <p class="chamada">{T.chamada}</p>
+      <p class="texto">{T.texto}</p>
+      {T.idioma ? <p class="idioma">{T.idioma}</p> : null}
+      <div class="lojas" role="group" aria-label={T.lojas}>
+        <span class="loja" aria-disabled="true"><small>{T.emBreve}</small>App Store</span>
+        <span class="loja" aria-disabled="true"><small>{T.emBreve}</small>Google Play</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="recursos faixa" aria-labelledby="recursos-titulo">
+    <h2 id="recursos-titulo">{T.recursosTitulo}</h2>
+    <ul>
+      {T.recursos.map((r) => (
+        <li>
+          <h3>{r.t}</h3>
+          <p>{r.d}</p>
+        </li>
+      ))}
+    </ul>
+    <p class="contato">
+      {T.suporte} <a href={ROTAS.suporte[lingua]}>{T.suporteLink}</a>.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .heroi {
+    background: radial-gradient(ellipse at 50% 35%, #1c3566 0%, #0b1730 70%);
+    color: #f3ebda;
+    text-align: center;
+    padding: 40px 0 48px;
+  }
+  .logo { width: min(520px, 100%); display: block; margin: 0 auto; }
+  .lema { font-family: 'Cinzel', Georgia, serif; color: #f6d98a; font-size: 1.35rem; letter-spacing: 0.06em; margin: 4px 0 18px; }
+  .chamada { font-weight: 700; font-size: 1.1rem; margin: 0 auto 8px; max-width: 620px; }
+  .texto { margin: 0 auto 12px; max-width: 620px; color: #d9cdb2; }
+  .idioma { margin: 0 auto 12px; color: #f6d98a; font-weight: 600; }
+  .lojas { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+  .loja {
+    display: inline-flex; flex-direction: column; align-items: flex-start;
+    min-width: 160px; padding: 8px 18px; border-radius: 12px;
+    border: 1.5px solid rgba(246, 217, 138, 0.7); background: rgba(0, 0, 0, 0.35);
+    color: #fff; font-weight: 700; font-size: 1.1rem; line-height: 1.2; text-align: left;
+  }
+  .loja small { font-weight: 600; font-size: 0.72rem; color: #f6d98a; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .recursos { padding-top: 40px; }
+  .recursos h2 { text-align: center; font-size: 1.5rem; margin: 0 0 24px; }
+  .recursos ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .recursos li { background: var(--cartao); border: 1px solid var(--linha); border-top: 3px solid var(--ouro); border-radius: 12px; padding: 16px 18px; }
+  .recursos h3 { font-size: 1.02rem; margin: 0 0 6px; }
+  .recursos li p { margin: 0; color: var(--suave); }
+  .contato { text-align: center; margin-top: 28px; }
+</style>

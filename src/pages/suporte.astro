@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import { APP, ROTAS } from '../i18n';
+---
+
+<Base lingua="pt" pagina="suporte" titulo="Suporte" descricao="Suporte e perguntas frequentes do Selah: Enigmas da Bíblia.">
+  <article class="documento">
+    <h1>Suporte</h1>
+    <p class="data">{APP.nome}</p>
+
+    <div class="resumo">
+      <p>Encontrou um problema, um erro no conteúdo ou tem uma sugestão? Escreva para <a href={`mailto:${APP.email}?subject=Selah%20-%20Suporte`}><strong>{APP.email}</strong></a>. Respondemos em até 5 dias úteis.</p>
+      <p>Para ajudar, conte o modelo do aparelho, a versão do sistema (iOS ou Android) e, se for o caso, o tema, a fase e o tipo de enigma.</p>
+    </div>
+
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>O Selah é gratuito?</summary>
+      <p>Sim. Não tem compras dentro do app, assinaturas nem anúncios.</p>
+    </details>
+    <details>
+      <summary>Preciso criar uma conta?</summary>
+      <p>Não. O Selah não tem conta nem login: é só abrir e jogar.</p>
+    </details>
+    <details>
+      <summary>Preciso de internet para jogar?</summary>
+      <p>Não. Depois de instalado, o jogo funciona sem internet.</p>
+    </details>
+    <details>
+      <summary>Troquei de celular. Como levo o meu progresso?</summary>
+      <p>O progresso fica guardado só no aparelho, sem cópia na nuvem, por isso não é transferido para outro celular. Lá, o jogo começa do início.</p>
+    </details>
+    <details>
+      <summary>Como apago o meu progresso?</summary>
+      <p>No app, vá em Ajustes › Apagar progresso. Para apagar tudo, inclusive os ajustes, desinstale o app. Veja mais em <a href={ROTAS.excluir.pt}>Excluir dados</a>.</p>
+    </details>
+    <details>
+      <summary>Como ligo ou desligo o lembrete diário?</summary>
+      <p>Em Ajustes, no próprio app. O Selah envia no máximo um lembrete por dia, e só se você ligar. Você também pode desligar as notificações do Selah nos ajustes do celular.</p>
+    </details>
+    <details>
+      <summary>O som ou a música não toca.</summary>
+      <p>Confira o volume do aparelho e os controles de som e música em Ajustes. No iPhone, o jogo toca mesmo com a chave do silencioso ligada; se ainda assim não tocar, feche o app por completo e abra de novo.</p>
+    </details>
+    <details>
+      <summary>As letras estão pequenas ou grandes demais.</summary>
+      <p>Ajuste o tamanho do texto em Ajustes. O jogo também respeita o tamanho de fonte do sistema.</p>
+    </details>
+    <details>
+      <summary>Encontrei um erro numa pista ou num versículo.</summary>
+      <p>Obrigado! Escreva para {APP.email} com o tema, a fase e o texto. Os versículos são da Bíblia Livre e as pistas são revisadas a cada atualização.</p>
+    </details>
+    <details>
+      <summary>Qual tradução da Bíblia o jogo usa?</summary>
+      <p>A Bíblia Livre (2018), uma tradução em português de licença aberta (CC BY 4.0).</p>
+    </details>
+    <details>
+      <summary>Para qual idade é o Selah?</summary>
+      <p>Para maiores de 13 anos. Os enigmas têm níveis de dificuldade, e o jogo se ajusta ao ritmo de quem joga.</p>
+    </details>
+
+    <h2>Mais informações</h2>
+    <ul>
+      <li><a href={ROTAS.privacidade.pt}>Política de Privacidade</a></li>
+      <li><a href={ROTAS.termos.pt}>Termos de Uso</a></li>
+      <li><a href={ROTAS.excluir.pt}>Excluir dados</a></li>
+    </ul>
+    <p>Responsável: {APP.responsavel} · {APP.cidade.pt}</p>
+  </article>
+</Base>

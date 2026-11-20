@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import { APP, ROTAS } from '../../i18n';
+---
+
+<Base lingua="en" pagina="suporte" titulo="Support" descricao="Support and frequently asked questions for Selah: Enigmas da Bíblia.">
+  <article class="documento">
+    <h1>Support</h1>
+    <p class="data">{APP.nome}</p>
+
+    <div class="resumo">
+      <p>Found a problem, a content error, or have a suggestion? Write to <a href={`mailto:${APP.email}?subject=Selah%20-%20Support`}><strong>{APP.email}</strong></a>. We reply within 5 business days, in Portuguese or English.</p>
+      <p>To help us, include your device model, system version (iOS or Android) and, if relevant, the theme, level and puzzle type.</p>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Is Selah free?</summary>
+      <p>Yes. It has no in-app purchases, subscriptions or ads.</p>
+    </details>
+    <details>
+      <summary>What language is the app in?</summary>
+      <p>Brazilian Portuguese.</p>
+    </details>
+    <details>
+      <summary>Do I need an account?</summary>
+      <p>No. Selah has no account or login: just open it and play.</p>
+    </details>
+    <details>
+      <summary>Do I need an internet connection?</summary>
+      <p>No. Once installed, the game works offline.</p>
+    </details>
+    <details>
+      <summary>I changed phones. How do I bring my progress?</summary>
+      <p>Progress is stored only on your device, with no cloud backup, so it does not move to another phone. On the new one, the game starts from the beginning.</p>
+    </details>
+    <details>
+      <summary>How do I erase my progress?</summary>
+      <p>In the app, go to Settings › Erase progress. To erase everything, including settings, uninstall the app. See more at <a href={ROTAS.excluir.en}>Delete data</a>.</p>
+    </details>
+    <details>
+      <summary>How do I turn the daily reminder on or off?</summary>
+      <p>In the app's Settings. Selah sends at most one reminder per day, and only if you turn it on. You can also turn off Selah's notifications in your phone settings.</p>
+    </details>
+    <details>
+      <summary>Sound or music does not play.</summary>
+      <p>Check your device volume and the sound and music controls in Settings. On iPhone, the game plays even with the silent switch on; if it still doesn't play, fully close the app and open it again.</p>
+    </details>
+    <details>
+      <summary>I found an error in a clue or verse.</summary>
+      <p>Thank you! Write to {APP.email} with the theme, level and text. Verses come from the Bíblia Livre and clues are reviewed with every update.</p>
+    </details>
+    <details>
+      <summary>What age is Selah for?</summary>
+      <p>Ages 13 and over. Puzzles have difficulty levels, and the game adapts to each player's pace.</p>
+    </details>
+
+    <h2>More information</h2>
+    <ul>
+      <li><a href={ROTAS.privacidade.en}>Privacy Policy</a></li>
+      <li><a href={ROTAS.termos.en}>Terms of Use</a></li>
+      <li><a href={ROTAS.excluir.en}>Delete data</a></li>
+    </ul>
+    <p>Developer: {APP.responsavel} · {APP.cidade.en}</p>
+  </article>
+</Base>

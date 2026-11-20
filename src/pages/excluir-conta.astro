@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import { APP, ROTAS } from '../i18n';
+---
+
+<Base lingua="pt" pagina="excluir" titulo="Excluir conta e dados" descricao="Como excluir os seus dados do Selah: Enigmas da Bíblia. O app não tem conta e não guarda dados fora do aparelho.">
+  <article class="documento">
+    <h1>Excluir conta e dados</h1>
+    <p class="data">{APP.nome} · {APP.responsavel}</p>
+
+    <div class="resumo">
+      <p><strong>O Selah não tem conta.</strong> Não existe cadastro, login nem dados seus guardados em servidores, então não há conta a excluir. Tudo o que o jogo guarda fica só no seu aparelho, e você mesmo pode apagar.</p>
+    </div>
+
+    <h2>Apagar só o progresso</h2>
+    <ol>
+      <li>Abra o Selah.</li>
+      <li>Toque na engrenagem para abrir os Ajustes.</li>
+      <li>Toque em <strong>Apagar progresso</strong> e confirme.</li>
+    </ol>
+    <p>Estrelas, fases concluídas e peças do Templo são apagadas na hora. Os ajustes (som, texto, lembrete) continuam.</p>
+
+    <h2>Apagar todos os dados</h2>
+    <p>Desinstale o app. Isso apaga do aparelho todos os dados do Selah: progresso, coleção, ajustes e estatísticas de jogo.</p>
+    <ul>
+      <li><strong>iPhone:</strong> toque e segure o ícone do Selah › Remover App › Apagar App.</li>
+      <li><strong>Android:</strong> toque e segure o ícone do Selah › Informações do app › Desinstalar. Para apagar sem desinstalar: Informações do app › Armazenamento › Limpar dados.</li>
+    </ul>
+
+    <h2>O que é apagado e o que fica</h2>
+    <p>Tudo o que o Selah guarda é apagado, porque fica só no aparelho. Não mantemos nenhuma cópia: não há prazo de retenção nem dado guardado depois da exclusão.</p>
+    <p>A Apple e o Google podem manter registros da sua instalação conforme as políticas deles; esses registros não são do Selah.</p>
+
+    <h2>Dúvidas</h2>
+    <p>Escreva para <a href={`mailto:${APP.email}`}>{APP.email}</a>. Mais detalhes na <a href={ROTAS.privacidade.pt}>Política de Privacidade</a>.</p>
+  </article>
+</Base>

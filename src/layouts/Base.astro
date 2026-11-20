@@ -1,0 +1,141 @@
+---
+import { APP, MENU, RODAPE, ROTAS, type Lingua, type Pagina } from '../i18n';
+
+interface Props {
+  lingua: Lingua;
+  pagina: Pagina;
+  titulo: string;
+  descricao: string;
+}
+
+const { lingua, pagina, titulo, descricao } = Astro.props;
+const outra: Lingua = lingua === 'pt' ? 'en' : 'pt';
+const site = Astro.site?.origin ?? '';
+const tituloCompleto = pagina === 'inicio' ? `${APP.nome} · ${APP.lema[lingua]}` : `${titulo} · Selah`;
+const ano = 2026;
+---
+
+<!doctype html>
+<html lang={lingua === 'pt' ? 'pt-BR' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{tituloCompleto}</title>
+    <meta name="description" content={descricao} />
+    <link rel="canonical" href={`${site}${ROTAS[pagina][lingua]}`} />
+    <link rel="alternate" hreflang="pt-BR" href={`${site}${ROTAS[pagina].pt}`} />
+    <link rel="alternate" hreflang="en" href={`${site}${ROTAS[pagina].en}`} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0B1730" />
+    <meta property="og:title" content={tituloCompleto} />
+    <meta property="og:description" content={descricao} />
+    <meta property="og:image" content={`${site}/img/logo.webp`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">{lingua === 'pt' ? 'Pular para o conteúdo' : 'Skip to content'}</a>
+    <header class="topo">
+      <div class="faixa">
+        <a class="marca" href={ROTAS.inicio[lingua]} aria-label={lingua === 'pt' ? 'Início' : 'Home'}>
+          <img src="/img/harpa.webp" alt="" width="34" height="34" />
+          <span>Selah</span>
+        </a>
+        <nav aria-label={lingua === 'pt' ? 'Principal' : 'Main'}>
+          {MENU[lingua].map((m) => (
+            <a href={ROTAS[m.pagina][lingua]} aria-current={m.pagina === pagina ? 'page' : undefined}>
+              {m.rotulo}
+            </a>
+          ))}
+          <a class="lingua" href={ROTAS[pagina][outra]} hreflang={outra === 'pt' ? 'pt-BR' : 'en'} lang={outra === 'pt' ? 'pt-BR' : 'en'}>
+            {outra === 'pt' ? 'PT' : 'EN'}
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <slot />
+    </main>
+
+    <footer class="rodape">
+      <div class="faixa">
+        <nav aria-label={lingua === 'pt' ? 'Páginas legais' : 'Legal pages'}>
+          {RODAPE[lingua].map((m) => <a href={ROTAS[m.pagina][lingua]}>{m.rotulo}</a>)}
+        </nav>
+        <p>
+          {APP.nome} · © {ano} {APP.responsavel} · {APP.cidade[lingua]}<br />
+          <a href={`mailto:${APP.email}`}>{APP.email}</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --noite: #0b1730;
+    --azul: #12264a;
+    --ouro: #d4a537;
+    --ouro-claro: #f6d98a;
+    --pergaminho: #fbf6ea;
+    --cartao: #fffdf7;
+    --tinta: #2b2118;
+    --suave: #6b5a44;
+    --linha: #e6d7b5;
+    --link: #8a6413;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --pergaminho: #0e1d3a;
+      --cartao: #142a50;
+      --tinta: #f3ebda;
+      --suave: #c9bb9c;
+      --linha: #2a3f66;
+      --link: #f2c14e;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--pergaminho);
+    color: var(--tinta);
+    font: 17px/1.65 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  img { max-width: 100%; height: auto; }
+  a { color: var(--link); }
+  h1, h2, h3 { font-family: 'Cinzel', Georgia, serif; line-height: 1.25; }
+  .faixa { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  .pular { position: absolute; left: -999px; top: 8px; background: var(--ouro); color: var(--noite); padding: 8px 12px; border-radius: 6px; z-index: 10; }
+  .pular:focus { left: 8px; }
+
+  .topo { background: var(--noite); border-bottom: 1px solid rgba(212, 165, 55, 0.4); }
+  .topo .faixa { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; flex-wrap: wrap; }
+  .marca { display: flex; align-items: center; gap: 8px; color: var(--ouro-claro); text-decoration: none; font-family: 'Cinzel', Georgia, serif; font-weight: 700; font-size: 1.25rem; }
+  .topo nav { display: flex; align-items: center; gap: 4px 14px; flex-wrap: wrap; }
+  .topo nav a { color: #e9dcc0; text-decoration: none; font-weight: 600; font-size: 0.95rem; padding: 6px 0; }
+  .topo nav a:hover, .topo nav a[aria-current='page'] { color: var(--ouro-claro); text-decoration: underline; text-underline-offset: 4px; }
+  .topo nav a.lingua { border: 1px solid rgba(246, 217, 138, 0.6); border-radius: 999px; padding: 2px 10px; font-size: 0.85rem; }
+
+  .rodape { background: var(--noite); color: #c9bb9c; margin-top: 56px; padding: 28px 0 36px; font-size: 0.92rem; }
+  .rodape nav { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-bottom: 12px; }
+  .rodape a { color: var(--ouro-claro); }
+  .rodape p { margin: 0; }
+
+  /* páginas de texto (política, termos, suporte) */
+  .documento { max-width: 760px; margin: 0 auto; padding: 36px 16px 0; }
+  .documento h1 { font-size: 1.75rem; margin: 0 0 4px; }
+  .documento .data { color: var(--suave); margin: 0 0 24px; font-size: 0.95rem; }
+  .documento h2 { font-size: 1.15rem; color: var(--link); margin: 32px 0 8px; }
+  .documento p, .documento li { margin: 0 0 12px; }
+  .documento ul, .documento ol { padding-left: 22px; }
+  .resumo { background: var(--cartao); border: 1px solid var(--linha); border-left: 4px solid var(--ouro); border-radius: 10px; padding: 14px 18px; margin: 0 0 8px; }
+  .resumo p:last-child { margin-bottom: 0; }
+  details { background: var(--cartao); border: 1px solid var(--linha); border-radius: 10px; padding: 12px 16px; margin: 0 0 10px; }
+  summary { cursor: pointer; font-weight: 700; }
+  details[open] summary { margin-bottom: 8px; }
+  details p:last-child { margin-bottom: 0; }
+</style>

@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import { APP, ROTAS } from '../../i18n';
+---
+
+<Base lingua="en" pagina="excluir" titulo="Delete account and data" descricao="How to delete your data from Selah: Enigmas da Bíblia. The app has no account and stores no data outside your device.">
+  <article class="documento">
+    <h1>Delete account and data</h1>
+    <p class="data">{APP.nome} · {APP.responsavel}</p>
+
+    <div class="resumo">
+      <p><strong>Selah has no account.</strong> There is no sign-up, no login and no data of yours stored on servers, so there is no account to delete. Everything the game stores stays on your device, and you can erase it yourself.</p>
+    </div>
+
+    <h2>Erase progress only</h2>
+    <ol>
+      <li>Open Selah.</li>
+      <li>Tap the gear to open Settings.</li>
+      <li>Tap <strong>Apagar progresso</strong> (Erase progress) and confirm.</li>
+    </ol>
+    <p>Stars, completed levels and Temple pieces are erased immediately. Settings (sound, text, reminder) are kept.</p>
+
+    <h2>Erase all data</h2>
+    <p>Uninstall the app. This removes all of Selah's data from the device: progress, collection, settings and gameplay statistics.</p>
+    <ul>
+      <li><strong>iPhone:</strong> touch and hold the Selah icon › Remove App › Delete App.</li>
+      <li><strong>Android:</strong> touch and hold the Selah icon › App info › Uninstall. To erase without uninstalling: App info › Storage › Clear data.</li>
+    </ul>
+
+    <h2>What is deleted and what is kept</h2>
+    <p>Everything Selah stores is deleted, because it lives only on the device. We keep no copy: there is no retention period and no data kept after deletion.</p>
+    <p>Apple and Google may keep records of your installation under their own policies; those records are not Selah's.</p>
+
+    <h2>Questions</h2>
+    <p>Write to <a href={`mailto:${APP.email}`}>{APP.email}</a>. More details in the <a href={ROTAS.privacidade.en}>Privacy Policy</a>.</p>
+  </article>
+</Base>

@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import { APP, ROTAS } from '../../i18n';
+---
+
+<Base lingua="en" pagina="privacidade" titulo="Privacy Policy" descricao="Privacy policy for Selah: Enigmas da Bíblia. The app does not collect, send or share any personal data.">
+  <article class="documento">
+    <h1>Privacy Policy</h1>
+    <p class="data">{APP.nome} · Effective {APP.vigencia.en}</p>
+
+    <div class="resumo">
+      <p><strong>In short:</strong> Selah does not collect, send or share any personal data. It has no accounts, ads, tracking or purchases. Everything the game stores stays on your device.</p>
+    </div>
+
+    <h2>1. Who is responsible</h2>
+    <p>{APP.nome} ("Selah" or "the app") is a Bible puzzle game for iPhone and Android, developed and published by <strong>{APP.responsavel}</strong>, based in {APP.cidade.en}. This policy explains how the app handles your information, in line with Brazil's General Data Protection Law (LGPD, Law No. 13,709/2018) and the App Store and Google Play rules. The Portuguese version of this policy prevails in case of any discrepancy.</p>
+
+    <h2>2. Data we collect</h2>
+    <p>None. The app does not ask for your name, email, phone number, location, contacts, photos or any other personal information, and it does not create an account.</p>
+    <p>Selah uses no third-party analytics, advertising or tracking tools, and does not access the device's advertising identifier.</p>
+
+    <h2>3. What is stored on your device</h2>
+    <p>For the game to work, the app stores the following locally, on your device only:</p>
+    <ul>
+      <li>your progress: completed levels, stars, Temple pieces and collection cards;</li>
+      <li>your settings: sound, music, vibration, text size, daily reminder and accessibility options;</li>
+      <li>gameplay statistics, such as time and correct answers per level, used only to adapt puzzle difficulty to your pace.</li>
+    </ul>
+    <p>This information never leaves your device: it is not sent to us or to anyone else. See how to erase it at <a href={ROTAS.excluir.en}>Delete data</a>.</p>
+
+    <h2>4. Notifications</h2>
+    <p>Selah may send at most one reminder per day, and only if you turn this option on in Settings and grant permission. Reminders are created and scheduled on the device itself: no server sends notifications and no data leaves the device for this. You can turn them off at any time in the app or in your system settings.</p>
+
+    <h2>5. Permissions</h2>
+    <p>The app does not use the camera, microphone, location, contacts, photos or device files. It only uses:</p>
+    <ul>
+      <li><strong>notifications</strong>, for the optional daily reminder;</li>
+      <li><strong>vibration</strong>, as touch feedback (can be turned off in Settings);</li>
+      <li><strong>audio</strong>, to play the game's music and sounds while the app is open.</li>
+    </ul>
+
+    <h2>6. Sharing</h2>
+    <p>Since we collect no data, there is nothing to sell, share or transfer to third parties.</p>
+    <p>Apple and Google, which distribute the app, may process data about downloads and store and system usage under their own privacy policies (for example, crash reports you agree to share in your device settings). That data is handled by them, not by Selah.</p>
+
+    <h2>7. This website</h2>
+    <p>This website is static: it uses no cookies, forms, analytics or tracking. The company hosting the site may log technical access data (such as IP address) for security purposes, under its own policy.</p>
+
+    <h2>8. Children and teenagers</h2>
+    <p>Selah is intended for users aged 13 and over and is not directed to children under 13. Since the app collects no personal data from any user, it collects no data from children or teenagers either.</p>
+
+    <h2>9. Your rights</h2>
+    <p>The LGPD gives you the right to know whether we process your data and to access, correct or delete it. Since Selah does not collect or store personal data outside your device, we hold no data of yours to access, correct or delete. Whatever exists stays under your control, on your device.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>If this policy changes, the new version will be published on this page with an updated effective date. If a future version of the app starts processing any data, this will be explained here before the change.</p>
+
+    <h2>11. Contact</h2>
+    <p>Questions about this policy or about privacy in Selah: <a href={`mailto:${APP.email}`}>{APP.email}</a>.</p>
+  </article>
+</Base>
