@@ -16,13 +16,46 @@ const T = {
     lojas: 'Em breve na App Store e no Google Play',
     recursosTitulo: 'O que tem no Selah',
     recursos: [
-      { t: '14 tipos de enigma', d: 'Palavras cruzadas, caça-palavras, sudoku das doze pedras, combinar 3, quebra-cabeças, perguntas e mais.' },
-      { t: '12 temas, 360 fases', d: 'Da Criação ao Apocalipse, com versículos da Bíblia Livre em cada fase.' },
+      { t: '14 enigmas, cada um com a sua história', d: 'Cada tipo de enigma é apresentado por um personagem da Bíblia, de Esdras, o escriba, à rainha de Sabá.' },
+      { t: '12 temas, 360 fases', d: 'Da Criação ao Apocalipse, 30 fases por tema, com um versículo da Bíblia Livre em cada fase e dificuldade que se ajusta ao seu ritmo.' },
       { t: 'O Templo de Salomão', d: 'Cada estrela conquistada ergue uma pedra do Templo, do alicerce ao santuário.' },
-      { t: 'Desafio do dia', d: 'Um enigma novo por dia para quem gosta de rotina, sem cobrança se faltar um dia.' },
-      { t: 'Sem anúncios e sem vidas', d: 'Jogue no seu ritmo: sem contagem regressiva, sem caixas de sorte, sem compras.' },
-      { t: 'Seus dados ficam com você', d: 'Sem conta e sem coleta de dados: o progresso fica só no seu aparelho.' },
+      { t: 'Desafio do dia', d: 'Um enigma novo todos os dias, para quem gosta de uma pausa diária. Se faltar um dia, tudo bem: aqui não há cobrança.' },
+      { t: 'Coleção', d: 'Conheça os personagens que apresentam cada enigma e reúna os cartões da coleção.' },
+      { t: 'Feito para jogar em paz', d: 'Sem anúncios, sem compras, sem vidas e sem contagem regressiva. Sem conta, funciona sem internet e os seus dados ficam só no seu aparelho.' },
     ],
+    enigmasTitulo: 'Os 14 enigmas',
+    enigmas: [
+      'Palavras cruzadas, com Esdras, o escriba',
+      'Caça-palavras da moeda perdida',
+      'Forca das 30 moedas',
+      'Anagramas da torre de Babel',
+      'Criptograma da escrita na parede, com Daniel',
+      'Charadas "quem sou eu", com o enigma de Sansão',
+      'Quiz das perguntas difíceis da rainha de Sabá',
+      'Sudoku das doze pedras do peitoral de Arão',
+      'Rede de letras, com Pedro',
+      'Combinar 3 nos celeiros do Egito, com José',
+      'Combinar 3 no palácio da rainha Ester',
+      'Quebra-cabeça de encaixe do muro de Jerusalém, com Neemias',
+      'Deslizar e juntar os pães e peixes',
+      'Ordenar as cores nas talhas de Caná',
+    ],
+    temasTitulo: 'Os 12 temas',
+    temas: [
+      'Criação e origens',
+      'Patriarcas',
+      'Êxodo e deserto',
+      'Juízes e heróis',
+      'Reis de Israel',
+      'Profetas',
+      'Salmos e sabedoria',
+      'Nascimento e infância de Jesus',
+      'Milagres',
+      'Parábolas',
+      'Paixão e ressurreição',
+      'Igreja primitiva e Apocalipse',
+    ],
+    acessibilidade: 'Lembrete diário opcional (no máximo um por dia), tamanho de texto ajustável, modo para daltônicos e opção de reduzir movimento.',
     idioma: '',
     suporte: 'Dúvidas ou sugestões?',
     suporteLink: 'Fale com a gente',
@@ -35,13 +68,46 @@ const T = {
     lojas: 'Coming soon to the App Store and Google Play',
     recursosTitulo: 'What\'s inside',
     recursos: [
-      { t: '14 kinds of puzzles', d: 'Crosswords, word search, the twelve-stones sudoku, match-3, jigsaws, quizzes and more.' },
-      { t: '12 themes, 360 levels', d: 'From Creation to Revelation, with verses from the Bíblia Livre in every level.' },
+      { t: '14 puzzles, each with its own story', d: 'Each kind of puzzle is presented by a Bible character, from Ezra the scribe to the Queen of Sheba.' },
+      { t: '12 themes, 360 levels', d: 'From Creation to Revelation, 30 levels per theme, with a verse from the Bíblia Livre in every level and difficulty that adapts to your pace.' },
       { t: 'Solomon\'s Temple', d: 'Every star you earn raises a stone of the Temple, from the foundation to the sanctuary.' },
-      { t: 'Daily challenge', d: 'A new puzzle every day for those who like a routine, with no penalty for missing a day.' },
-      { t: 'No ads, no lives', d: 'Play at your own pace: no fake countdowns, no loot boxes, no purchases.' },
-      { t: 'Your data stays with you', d: 'No account and no data collection: your progress stays on your device.' },
+      { t: 'Daily challenge', d: 'A new puzzle every day for those who enjoy a daily pause. Miss a day? That is fine: there is no penalty here.' },
+      { t: 'Collection', d: 'Meet the characters who present each puzzle and collect their cards.' },
+      { t: 'Made to play in peace', d: 'No ads, no purchases, no lives and no countdowns. No account, works offline, and your data stays on your device.' },
     ],
+    enigmasTitulo: 'The 14 puzzles',
+    enigmas: [
+      'Crosswords, with Ezra the scribe',
+      'Word search of the lost coin',
+      'Hangman of the 30 coins',
+      'Anagrams of the Tower of Babel',
+      'Cryptogram of the writing on the wall, with Daniel',
+      '"Who am I" riddles, with Samson\'s riddle',
+      'Quiz of the hard questions of the Queen of Sheba',
+      'Sudoku of the twelve stones of Aaron\'s breastplate',
+      'Net of letters, with Peter',
+      'Match-3 in the granaries of Egypt, with Joseph',
+      'Match-3 in Queen Esther\'s palace',
+      'Jigsaw of the wall of Jerusalem, with Nehemiah',
+      'Slide and merge the loaves and fishes',
+      'Sort the colors in the jars of Cana',
+    ],
+    temasTitulo: 'The 12 themes',
+    temas: [
+      'Creation and origins',
+      'Patriarchs',
+      'Exodus and the wilderness',
+      'Judges and heroes',
+      'Kings of Israel',
+      'Prophets',
+      'Psalms and wisdom',
+      'Birth and childhood of Jesus',
+      'Miracles',
+      'Parables',
+      'Passion and resurrection',
+      'Early church and Revelation',
+    ],
+    acessibilidade: 'Optional daily reminder (at most one a day), adjustable text size, color-blind mode and a reduce-motion option.',
     idioma: 'The app is available in Brazilian Portuguese.',
     suporte: 'Questions or suggestions?',
     suporteLink: 'Get in touch',
@@ -74,6 +140,17 @@ const T = {
         </li>
       ))}
     </ul>
+    <div class="listas">
+      <section aria-labelledby="enigmas-titulo">
+        <h2 id="enigmas-titulo">{T.enigmasTitulo}</h2>
+        <ul>{T.enigmas.map((e) => <li>{e}</li>)}</ul>
+      </section>
+      <section aria-labelledby="temas-titulo">
+        <h2 id="temas-titulo">{T.temasTitulo}</h2>
+        <ol>{T.temas.map((e) => <li>{e}</li>)}</ol>
+      </section>
+    </div>
+    <p class="acessivel">{T.acessibilidade}</p>
     <p class="contato">
       {T.suporte} <a href={ROTAS.suporte[lingua]}>{T.suporteLink}</a>.
     </p>
@@ -107,5 +184,11 @@ const T = {
   .recursos li { background: var(--cartao); border: 1px solid var(--linha); border-top: 3px solid var(--ouro); border-radius: 12px; padding: 16px 18px; }
   .recursos h3 { font-size: 1.02rem; margin: 0 0 6px; }
   .recursos li p { margin: 0; color: var(--suave); }
-  .contato { text-align: center; margin-top: 28px; }
+  .listas { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin-top: 32px; }
+  .listas section { background: var(--cartao); border: 1px solid var(--linha); border-radius: 12px; padding: 18px 20px 8px; }
+  .listas h2 { font-size: 1.2rem; text-align: left; margin: 0 0 10px; }
+  .recursos .listas ul, .recursos .listas ol { list-style: revert; display: block; padding-left: 22px; margin: 0 0 10px; }
+  .recursos .listas li { background: none; border: 0; padding: 0; margin: 0 0 6px; border-radius: 0; }
+  .acessivel { text-align: center; color: var(--suave); margin: 24px auto 0; max-width: 640px; }
+  .contato { text-align: center; margin-top: 16px; }
 </style>
