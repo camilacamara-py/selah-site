@@ -7,7 +7,7 @@ export const APP = {
   nome: 'Selah: Enigmas da Bíblia',
   lema: { pt: 'Pause. Pense. Descubra.', en: 'Pause. Think. Discover.' },
   responsavel: 'Arke Play',
-  cidade: { pt: 'Belo Horizonte, MG, Brasil', en: 'Belo Horizonte, MG, Brazil' },
+  cidade: { pt: 'Goiânia, GO, Brasil', en: 'Goiânia, GO, Brazil' },
   email: 'arkeplay.puzzles@gmail.com',
   vigencia: { pt: '20 de novembro de 2026', en: 'November 20, 2026' },
 };
