@@ -3,64 +3,131 @@ import Base from '../layouts/Base.astro';
 import { APP, ROTAS } from '../i18n';
 ---
 
-<Base lingua="pt" pagina="privacidade" titulo="Política de Privacidade" descricao="Política de privacidade do Selah: Enigmas da Bíblia. O app não coleta, envia nem compartilha dados pessoais.">
+<Base lingua="pt" pagina="privacidade" titulo="Política de Privacidade" descricao="Política de privacidade do Selah: Enigmas da Bíblia. Conta anônima para o ranking, sem nome, e-mail, anúncios ou rastreamento.">
   <article class="documento">
     <h1>Política de Privacidade</h1>
     <p class="data">{APP.nome} · Em vigor desde {APP.vigencia.pt}</p>
 
     <div class="resumo">
-      <p><strong>Em resumo:</strong> o Selah não coleta nem compartilha nenhum dado pessoal. Não tem conta, anúncios, rastreamento nem compras. Tudo o que o jogo guarda fica só no seu aparelho. A única conexão que o app faz é para baixar atualizações do próprio jogo, e ela não leva nenhum dado seu.</p>
+      <p><strong>Em resumo:</strong> o Selah não pede nome, e-mail, telefone nem senha, e não tem anúncios, rastreamento nem compras. Para o ranking e as ligas, o app cria sozinho uma conta anônima e guarda no nosso servidor, no Brasil, só o necessário: um código aleatório, o apelido que você escolher, o personagem, os pontos e os resultados das fases. Seu apelido fica escondido dos outros jogadores até você decidir mostrá-lo, e não existe nenhuma forma de contato entre jogadores. Você pode excluir tudo a qualquer momento, no próprio app.</p>
     </div>
 
     <h2>1. Quem é o responsável</h2>
-    <p>O {APP.nome} ("Selah" ou "o app") é um jogo de enigmas bíblicos para iPhone e Android, desenvolvido e publicado por <strong>{APP.responsavel}</strong>, de {APP.cidade.pt}. Esta política explica como o app trata as suas informações, conforme a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018) e as regras da App Store e do Google Play.</p>
+    <p>O {APP.nome} ("Selah" ou "o app") é um jogo de enigmas bíblicos para iPhone e Android, desenvolvido e publicado por <strong>{APP.responsavel}</strong>, de {APP.cidade.pt}, que é a controladora dos dados descritos aqui. Esta política explica como o app trata as suas informações, conforme a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018), o Estatuto Digital da Criança e do Adolescente e as regras da App Store e do Google Play.</p>
 
-    <h2>2. Dados que coletamos</h2>
-    <p>Nenhum. O app não pede nome, e-mail, telefone, localização, contatos, fotos nem qualquer outra informação pessoal, e não cria conta.</p>
-    <p>O Selah não usa ferramentas de análise, de publicidade nem de rastreamento de terceiros, e não acessa o identificador de publicidade do aparelho.</p>
+    <h2>2. Dados que tratamos</h2>
+    <h3>2.1 Conta anônima</h3>
+    <p>Na primeira vez que você abre o app com internet, ele cria uma conta anônima no nosso servidor: um código aleatório, sem nome, e-mail, telefone ou senha. Esse código fica guardado no aparelho para o app continuar usando a mesma conta. Se você desinstalar o app ou trocar de aparelho, uma conta nova é criada; como não há e-mail, não temos como recuperar a anterior.</p>
 
-    <h2>3. Atualizações do jogo</h2>
-    <p>Quando você abre o app com internet, ele verifica se há uma versão nova do conteúdo do jogo (correções de textos, de enigmas ou de telas) no serviço de atualizações da Expo (EAS Update), usado para distribuir o Selah. Se houver, ela é baixada e aplicada na próxima vez que o app abrir. Sem internet, o jogo funciona normalmente.</p>
-    <p>Essa verificação envia apenas informações técnicas: o sistema (iOS ou Android), a versão do app e um código aleatório gerado pelo próprio aparelho para esta instalação, que serve só para entregar as atualizações aos poucos. Esse código não contém nem é ligado a nome, e-mail, conta ou qualquer dado seu, e muda se você reinstalar o app. Como em qualquer acesso à internet, o servidor também recebe o endereço IP da conexão. Nenhum progresso, ajuste ou estatística de jogo é enviado.</p>
-
-    <h2>4. O que fica guardado no seu aparelho</h2>
-    <p>Para o jogo funcionar, o app guarda localmente, só no seu aparelho:</p>
+    <h3>2.2 Perfil de jogador</h3>
     <ul>
-      <li>o seu progresso: fases concluídas, estrelas, peças do Templo e cartões da coleção;</li>
-      <li>os seus ajustes: som, música, vibração, tamanho do texto, lembrete diário e opções de acessibilidade;</li>
-      <li>estatísticas de jogo, como tempo e acertos por fase, usadas só para ajustar a dificuldade dos enigmas ao seu ritmo.</li>
+      <li>o <strong>apelido</strong> que você escolhe ou gera no app (de 3 a 16 letras, números ou sublinhado) e a data da última troca;</li>
+      <li>o <strong>personagem</strong> escolhido numa galeria fixa do app (não há envio de fotos);</li>
+      <li>se você aparece no ranking com o apelido ou como "Jogador anônimo";</li>
+      <li>a sua liga, a moldura e o título escolhidos e o estoque de dicas extras.</li>
     </ul>
-    <p>Essas informações nunca saem do aparelho: não são enviadas para nós nem para ninguém. Veja como apagá-las em <a href={ROTAS.excluir.pt}>Excluir dados</a>.</p>
 
-    <h2>5. Notificações</h2>
-    <p>O Selah pode enviar no máximo um lembrete por dia, e só se você ligar essa opção nos Ajustes e der permissão. Os lembretes são criados e agendados no próprio aparelho: nenhum servidor envia notificações e nenhum dado sai do aparelho para isso. Você pode desligá-los a qualquer momento no app ou nos ajustes do sistema.</p>
+    <h3>2.3 Resultados das fases e recompensas</h3>
+    <p>Quando você termina uma fase, o app envia o resultado: se foi da trilha ou do desafio do dia, o tema, a fase, o tipo de enigma, o nível, se venceu, as estrelas, o tempo, os erros, as dicas usadas, o dia e o horário em que terminou. O servidor calcula os pontos a partir disso. Também guardamos o grupo e a posição na liga de cada semana e as medalhas, títulos, molduras e dicas extras que você ganhou.</p>
 
-    <h2>6. Permissões</h2>
+    <h3>2.4 Denúncias</h3>
+    <p>Se você denunciar um apelido no ranking, guardamos qual jogador foi denunciado, o apelido denunciado e qual conta fez a denúncia. Quem é denunciado não fica sabendo quem denunciou.</p>
+
+    <h3>2.5 Dados técnicos</h3>
+    <p>Como em qualquer acesso à internet, os servidores recebem o endereço IP e informações técnicas da conexão, que o provedor registra em logs de segurança e funcionamento.</p>
+
+    <h3>2.6 O que não coletamos</h3>
+    <p>Não coletamos nome, e-mail, telefone, data de nascimento, localização, contatos, fotos nem o identificador de publicidade do aparelho. O Selah não usa ferramentas de análise, de publicidade nem de rastreamento de terceiros.</p>
+
+    <h2>3. Para que usamos</h2>
+    <ul>
+      <li>mostrar o ranking da liga semanal, do desafio do dia e o geral, e calcular os pontos;</li>
+      <li>montar os grupos da liga, fechar a semana e entregar as recompensas;</li>
+      <li>evitar fraude: o servidor confere cada resultado (por exemplo, tempo mínimo plausível e fases jogadas ao mesmo tempo). Resultados que parecem impossíveis ficam fora do ranking e podem ser revisados por uma pessoa da equipe, que decide se contam;</li>
+      <li>moderar apelidos: um apelido denunciado pode ser trocado por um gerado pelo app, e quem desrespeitar as regras pode ser bloqueado no ranking.</li>
+    </ul>
+    <p>As bases legais são a execução do serviço que você usa ao jogar com ranking (art. 7º, V, da LGPD) e o legítimo interesse em manter o ranking justo e seguro (art. 7º, IX). Não usamos os seus dados para publicidade, não traçamos perfil de consumo e não vendemos dados.</p>
+
+    <h2>4. O que os outros jogadores veem</h2>
+    <p>No ranking, os outros jogadores veem:</p>
+    <ul>
+      <li>o seu <strong>apelido</strong>, só se você ligar "Mostrar meu apelido no ranking". Essa opção vem <strong>desligada</strong> para todos; desligada, você aparece como "Jogador anônimo";</li>
+      <li>o personagem, a moldura e, junto com o apelido, o título;</li>
+      <li>os pontos da semana e o total, e no desafio do dia as estrelas, o tempo e os erros.</li>
+    </ul>
+    <p>Ninguém vê o seu código de conta. O Selah não tem chat, mensagens, lista de amigos nem qualquer outra forma de contato entre jogadores.</p>
+
+    <h2>5. O que fica só no seu aparelho</h2>
+    <p>Continuam guardados só no aparelho, sem envio para o servidor:</p>
+    <ul>
+      <li>o progresso da trilha: fases concluídas, estrelas, peças do Templo, cartões da coleção e conquistas;</li>
+      <li>os ajustes: som, música, vibração, tamanho do texto, lembrete diário e opções de acessibilidade;</li>
+      <li>estatísticas de jogo usadas só para ajustar a dificuldade dos enigmas ao seu ritmo.</li>
+    </ul>
+    <p>Sem internet, o jogo funciona normalmente: os resultados esperam no aparelho e sobem para o ranking quando a conexão voltar.</p>
+
+    <h2>6. Atualizações do jogo</h2>
+    <p>Quando você abre o app com internet, ele verifica se há uma versão nova do conteúdo do jogo (correções de textos, de enigmas ou de telas) no serviço de atualizações da Expo (EAS Update), usado para distribuir o Selah. Se houver, ela é baixada e aplicada na próxima vez que o app abrir.</p>
+    <p>Essa verificação envia apenas informações técnicas: o sistema (iOS ou Android), a versão do app e um código aleatório gerado pelo aparelho para esta instalação, que serve só para entregar as atualizações aos poucos. Esse código é diferente do código da conta anônima e não é ligado a ela. O servidor também recebe o endereço IP da conexão.</p>
+
+    <h2>7. Notificações</h2>
+    <p>O Selah pode enviar no máximo um lembrete por dia, e só se você ligar essa opção nos Ajustes e der permissão. Os lembretes são criados e agendados no próprio aparelho: nenhum servidor envia notificações. Você pode desligá-los a qualquer momento no app ou nos ajustes do sistema.</p>
+
+    <h2>8. Permissões</h2>
     <p>O app não usa câmera, microfone, localização, contatos, fotos nem arquivos do aparelho. Ele usa apenas:</p>
     <ul>
       <li><strong>notificações</strong>, para o lembrete diário opcional;</li>
       <li><strong>vibração</strong>, como resposta aos toques (pode ser desligada nos Ajustes);</li>
       <li><strong>áudio</strong>, para tocar a música e os sons do jogo enquanto o app está aberto;</li>
-      <li><strong>internet</strong>, só para baixar atualizações do jogo (item 3).</li>
+      <li><strong>internet</strong>, para o ranking (itens 2 a 4) e para baixar atualizações do jogo (item 6).</li>
     </ul>
 
-    <h2>7. Compartilhamento</h2>
-    <p>Como não coletamos dados pessoais, não há nada a vender, compartilhar ou transferir a terceiros. A Expo, que entrega as atualizações do jogo (item 3), recebe só as informações técnicas descritas ali, como prestadora desse serviço.</p>
+    <h2>9. Com quem compartilhamos</h2>
+    <p>Não vendemos nem compartilhamos dados para publicidade. Usamos dois prestadores de serviço, que tratam os dados só para operar o app, em nosso nome:</p>
+    <ul>
+      <li><strong>Supabase</strong>, que hospeda o servidor do ranking (conta anônima, perfil, resultados, ligas e denúncias). Os dados ficam armazenados em servidores no Brasil, na região de São Paulo. O Supabase é uma empresa com sede nos Estados Unidos;</li>
+      <li><strong>Expo</strong>, que entrega as atualizações do jogo, com as informações técnicas descritas no item 6.</li>
+    </ul>
     <p>A Apple e o Google, que distribuem o app, podem tratar dados sobre o download e o uso das lojas e do sistema conforme as políticas de privacidade deles (por exemplo, relatórios de falhas que você aceita enviar nos ajustes do aparelho). Esses dados são tratados por eles, não pelo Selah.</p>
+    <p>Podemos fornecer dados quando a lei ou uma ordem judicial exigir.</p>
 
-    <h2>8. Este site</h2>
+    <h2>10. Por quanto tempo guardamos</h2>
+    <ul>
+      <li><strong>Resultados detalhados das fases:</strong> 90 dias. Depois, fica só o total de pontos.</li>
+      <li><strong>Perfil, total de pontos, liga e recompensas:</strong> enquanto a conta existir.</li>
+      <li><strong>Conta sem uso por 12 meses:</strong> é apagada automaticamente, com todos os dados ligados a ela.</li>
+      <li><strong>Denúncias já resolvidas e o histórico das decisões da moderação:</strong> 12 meses.</li>
+      <li><strong>Logs técnicos do provedor:</strong> pelo prazo definido na política do provedor.</li>
+    </ul>
+
+    <h2>11. Como excluir</h2>
+    <p>No app, toque no seu avatar no topo da tela inicial para abrir o Perfil e toque em <strong>Excluir conta</strong>. Isso apaga do servidor, na hora, a sua conta anônima e tudo o que está ligado a ela: apelido, personagem, pontos, resultados, liga, recompensas e as denúncias feitas por você ou contra você. O progresso da trilha, que fica no aparelho, continua. Veja todos os passos em <a href={ROTAS.excluir.pt}>Excluir conta e dados</a>.</p>
+    <p>Se você não tem mais o app, escreva para <a href={`mailto:${APP.email}`}>{APP.email}</a> com o seu apelido, ou aguarde: uma conta sem uso é apagada automaticamente em 12 meses.</p>
+
+    <h2>12. Crianças e adolescentes</h2>
+    <p>O Selah é indicado para maiores de 13 anos e não é direcionado a crianças menores de 13. Para proteger os adolescentes que jogam:</p>
+    <ul>
+      <li>o apelido vem escondido no ranking para todos, até a pessoa decidir mostrá-lo;</li>
+      <li>o apelido passa por um filtro que bloqueia palavrões, ofensas, e-mail, telefone, links, redes sociais e nome completo;</li>
+      <li>não há chat, mensagens, fotos nem qualquer contato entre jogadores;</li>
+      <li>não há compras, e as recompensas são sempre gratuitas, conhecidas antes e sem sorteio;</li>
+      <li>qualquer jogador pode denunciar um apelido, e a moderação pode trocá-lo ou bloquear quem desrespeitar as regras.</li>
+    </ul>
+    <p>Não pedimos a idade. Pais ou responsáveis podem pedir a exclusão dos dados de um adolescente pelo e-mail do item 15, informando o apelido.</p>
+
+    <h2>13. Seus direitos</h2>
+    <p>A LGPD garante a você o direito de confirmar se tratamos dados seus, acessá-los, corrigi-los, pedir a exclusão, a portabilidade e informações sobre com quem compartilhamos, e de se opor a um tratamento. No próprio app você já pode trocar o apelido, escolher aparecer ou não no ranking e excluir a conta. Para os outros pedidos, escreva para <a href={`mailto:${APP.email}`}>{APP.email}</a> com o seu apelido. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+    <h2>14. Segurança</h2>
+    <p>A comunicação entre o app e o servidor é criptografada. No banco de dados, regras de acesso garantem que cada jogador só lê e altera os próprios dados, e os pontos só entram depois da conferência feita no servidor. A moderação só acessa o que precisa por uma conta de administração protegida por senha.</p>
+
+    <h2>15. Contato</h2>
+    <p>Dúvidas e pedidos sobre privacidade no Selah: <a href={`mailto:${APP.email}`}>{APP.email}</a>.</p>
+
+    <h2>16. Este site</h2>
     <p>Este site é estático: não usa cookies, formulários, ferramentas de análise nem rastreamento. A empresa que hospeda o site pode registrar dados técnicos de acesso (como endereço IP) por segurança, conforme a política dela.</p>
 
-    <h2>9. Crianças e adolescentes</h2>
-    <p>O Selah é indicado para maiores de 13 anos e não é direcionado a crianças menores de 13. Como o app não coleta dados pessoais de nenhum usuário, também não coleta dados de crianças nem de adolescentes.</p>
-
-    <h2>10. Seus direitos</h2>
-    <p>A LGPD garante a você o direito de saber se tratamos dados seus, de acessá-los, corrigi-los e pedir a exclusão. Como o Selah não coleta nem guarda dados pessoais fora do seu aparelho, não temos dados seus para consultar, corrigir ou apagar. O que existe fica sob o seu controle, no aparelho.</p>
-
-    <h2>11. Mudanças nesta política</h2>
-    <p>Se esta política mudar, a nova versão será publicada nesta página, com a data de vigência atualizada. Se uma versão futura do app passar a tratar algum dado, isso será explicado aqui antes da mudança.</p>
-
-    <h2>12. Contato</h2>
-    <p>Dúvidas sobre esta política ou sobre privacidade no Selah: <a href={`mailto:${APP.email}`}>{APP.email}</a>.</p>
+    <h2>17. Mudanças nesta política</h2>
+    <p>Se esta política mudar, a nova versão será publicada nesta página, com a data de vigência atualizada.</p>
   </article>
 </Base>

@@ -9,7 +9,7 @@ export const APP = {
   responsavel: 'Arke Play',
   cidade: { pt: 'Goiânia, GO, Brasil', en: 'Goiânia, GO, Brazil' },
   email: 'arkeplay.puzzles@gmail.com',
-  vigencia: { pt: '20 de novembro de 2026', en: 'November 20, 2026' },
+  vigencia: { pt: '21 de novembro de 2026', en: 'November 21, 2026' },
 };
 
 /** Pares de rotas: a mesma página em português e em inglês. */
@@ -41,12 +41,12 @@ export const RODAPE: Record<Lingua, { pagina: Pagina; rotulo: string }[]> = {
     { pagina: 'suporte', rotulo: 'Suporte e perguntas' },
     { pagina: 'privacidade', rotulo: 'Política de Privacidade' },
     { pagina: 'termos', rotulo: 'Termos de Uso' },
-    { pagina: 'excluir', rotulo: 'Excluir dados' },
+    { pagina: 'excluir', rotulo: 'Excluir conta e dados' },
   ],
   en: [
     { pagina: 'suporte', rotulo: 'Support and FAQ' },
     { pagina: 'privacidade', rotulo: 'Privacy Policy' },
     { pagina: 'termos', rotulo: 'Terms of Use' },
-    { pagina: 'excluir', rotulo: 'Delete data' },
+    { pagina: 'excluir', rotulo: 'Delete account and data' },
   ],
 };

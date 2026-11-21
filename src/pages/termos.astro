@@ -9,7 +9,7 @@ import { APP, ROTAS } from '../i18n';
     <p class="data">{APP.nome} · Em vigor desde {APP.vigencia.pt}</p>
 
     <div class="resumo">
-      <p><strong>Em resumo:</strong> o Selah é gratuito, sem compras, sem anúncios e sem conta. Você pode jogar à vontade para uso pessoal; o jogo é oferecido como está, e os textos bíblicos são da Bíblia Livre.</p>
+      <p><strong>Em resumo:</strong> o Selah é gratuito, sem compras e sem anúncios. Para o ranking, o app cria uma conta anônima, sem cadastro. Seja respeitoso no apelido e jogue limpo: apelidos impróprios podem ser trocados e quem trapacear pode ser bloqueado no ranking. O jogo é oferecido como está, e os textos bíblicos são da Bíblia Livre.</p>
     </div>
 
     <h2>1. Aceitação</h2>
@@ -22,7 +22,7 @@ import { APP, ROTAS } from '../i18n';
     <p>Concedemos a você uma licença pessoal, gratuita, não exclusiva, intransferível e revogável para baixar e usar o Selah nos seus aparelhos, para fins pessoais e não comerciais. Você não pode copiar, modificar, distribuir, vender, alugar, fazer engenharia reversa do app nem usar o conteúdo dele fora do app, exceto quando a lei permitir ou quando a licença de um conteúdo específico autorizar (veja o item 5).</p>
 
     <h2>4. Preço, compras e anúncios</h2>
-    <p>O Selah é gratuito. Não tem compras dentro do app, assinaturas nem anúncios. Se isso mudar no futuro, estes termos serão atualizados antes, com as condições de compra e reembolso.</p>
+    <p>O Selah é gratuito. Não tem compras dentro do app, assinaturas nem anúncios. Se isso mudar no futuro, estes termos serão atualizados antes, com as condições de compra e reembolso, e compras nunca vão dar pontos nem vantagem no ranking.</p>
 
     <h2>5. Conteúdo e propriedade intelectual</h2>
     <p>O app, a marca Selah, os enigmas, as ilustrações, os sons, as músicas e os textos originais pertencem a {APP.responsavel} ou são usados com licença.</p>
@@ -32,25 +32,39 @@ import { APP, ROTAS } from '../i18n';
     <h2>6. Uso adequado</h2>
     <p>Você concorda em não usar o app de forma ilegal, não tentar contornar o funcionamento dele e não usá-lo para prejudicar outras pessoas.</p>
 
-    <h2>7. Seu progresso</h2>
-    <p>O progresso fica guardado só no seu aparelho (veja a <a href={ROTAS.privacidade.pt}>Política de Privacidade</a>). Como não há conta nem cópia na nuvem, ele pode ser perdido se você desinstalar o app, apagar os dados dele ou trocar de aparelho, e não temos como recuperá-lo.</p>
+    <h2>7. Apelido, ranking e moderação</h2>
+    <p>Para aparecer no ranking, você escolhe um apelido (ou gera um no app). O apelido não pode:</p>
+    <ul>
+      <li>ter palavrões, ofensas, discriminação ou conteúdo sexual, em qualquer língua ou com letras trocadas por números;</li>
+      <li>ter e-mail, telefone, link, rede social ou outra forma de contato;</li>
+      <li>ter o seu nome completo ou o de outra pessoa, nem imitar outra pessoa, a equipe do Selah ou uma organização.</li>
+    </ul>
+    <p>O app recusa na hora o que o filtro reconhece, mas a responsabilidade pelo apelido é sua. Qualquer jogador pode denunciar um apelido no ranking. A equipe do Selah pode trocar um apelido impróprio por um gerado pelo app e bloquear no ranking quem desrespeitar estas regras.</p>
+    <p>Os pontos são calculados e conferidos no servidor. É proibido tentar enganar o ranking (por exemplo, alterando o app, o relógio do aparelho ou o envio de resultados). Resultados que parecem impossíveis ficam fora do ranking até serem revisados, e podem ser rejeitados. Quem trapacear pode ser bloqueado.</p>
+    <p>As regras das ligas, dos pontos e das recompensas aparecem no app e podem ser ajustadas para manter o jogo justo.</p>
 
-    <h2>8. Garantias e responsabilidade</h2>
+    <h2>8. Recompensas</h2>
+    <p>Medalhas, títulos, molduras, dicas extras e conquistas são sempre gratuitos, conhecidos antes e entregues sem sorteio. Eles existem só dentro do Selah: não têm valor em dinheiro, não podem ser vendidos, trocados nem transferidos para outra conta, e são perdidos se a conta for excluída.</p>
+
+    <h2>9. Seu progresso e a sua conta</h2>
+    <p>O progresso da trilha fica guardado só no seu aparelho, e os dados do ranking ficam na conta anônima criada pelo app (veja a <a href={ROTAS.privacidade.pt}>Política de Privacidade</a>). Como não há e-mail nem senha, os dois podem ser perdidos se você desinstalar o app, apagar os dados dele ou trocar de aparelho, e não temos como recuperá-los. Você pode excluir a conta a qualquer momento no Perfil, dentro do app (veja <a href={ROTAS.excluir.pt}>Excluir conta e dados</a>).</p>
+
+    <h2>10. Garantias e responsabilidade</h2>
     <p>O Selah é oferecido "no estado em que se encontra". Fazemos o possível para que funcione bem e para que o conteúdo esteja correto, mas não garantimos que o app estará livre de erros ou sempre disponível. Na medida permitida pela lei, {APP.responsavel} não se responsabiliza por danos indiretos decorrentes do uso ou da impossibilidade de uso do app. Nada nestes termos limita os direitos que você tem pelo Código de Defesa do Consumidor.</p>
 
-    <h2>9. Atualizações e encerramento</h2>
-    <p>Podemos atualizar, mudar ou deixar de oferecer o app ou partes dele. Você pode parar de usar o Selah a qualquer momento, desinstalando-o.</p>
+    <h2>11. Atualizações e encerramento</h2>
+    <p>Podemos atualizar, mudar ou deixar de oferecer o app ou partes dele. Você pode parar de usar o Selah a qualquer momento, excluindo a conta no Perfil e desinstalando o app.</p>
 
-    <h2>10. Lojas de aplicativos</h2>
+    <h2>12. Lojas de aplicativos</h2>
     <p>Se você baixou o Selah na App Store, também valem os <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">termos de licença padrão da Apple para apps (EULA)</a>; se houver conflito, prevalecem estes termos naquilo que a Apple permitir. A Apple e o Google não são responsáveis pelo app nem pelo suporte dele.</p>
 
-    <h2>11. Mudanças nestes termos</h2>
+    <h2>13. Mudanças nestes termos</h2>
     <p>Se estes termos mudarem, a nova versão será publicada nesta página com a data atualizada. Continuar usando o app depois da mudança significa aceitar a nova versão.</p>
 
-    <h2>12. Lei e foro</h2>
+    <h2>14. Lei e foro</h2>
     <p>Estes termos seguem as leis do Brasil. Fica eleito o foro da comarca de Goiânia, GO, ressalvado o direito do consumidor de propor ação no foro do seu domicílio.</p>
 
-    <h2>13. Contato</h2>
+    <h2>15. Contato</h2>
     <p><a href={`mailto:${APP.email}`}>{APP.email}</a></p>
   </article>
 </Base>

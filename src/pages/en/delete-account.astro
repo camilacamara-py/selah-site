@@ -3,33 +3,48 @@ import Base from '../../layouts/Base.astro';
 import { APP, ROTAS } from '../../i18n';
 ---
 
-<Base lingua="en" pagina="excluir" titulo="Delete account and data" descricao="How to delete your data from Selah: Enigmas da Bíblia. The app has no account and stores no data outside your device.">
+<Base lingua="en" pagina="excluir" titulo="Delete account and data" descricao="How to delete the anonymous leaderboard account and the data of Selah: Enigmas da Bíblia, inside the app.">
   <article class="documento">
     <h1>Delete account and data</h1>
     <p class="data">{APP.nome} · {APP.responsavel}</p>
 
     <div class="resumo">
-      <p><strong>Selah has no account.</strong> There is no sign-up, no login and no data of yours stored on servers, so there is no account to delete. Everything the game stores stays on your device, and you can erase it yourself.</p>
+      <p><strong>In short:</strong> for the leaderboard, Selah creates an anonymous account by itself (no name, email or password). You can delete it at any time inside the app, and everything on the server is deleted immediately. Your trail progress stays on your device, and you can erase it too.</p>
     </div>
 
-    <h2>Erase progress only</h2>
+    <h2>Delete the leaderboard account</h2>
+    <ol>
+      <li>Open Selah.</li>
+      <li>Tap your avatar at the top of the home screen to open the Profile.</li>
+      <li>At the bottom of the page, tap <strong>Delete account</strong> and confirm.</li>
+    </ol>
+    <p>Deleted from the server immediately: the anonymous account, nickname, character, points, level results, league, medals, titles, frames and extra hints, and any reports made by you or about you. You leave every leaderboard.</p>
+    <p>Your trail progress (stars, levels, Temple pieces and collection) is on your device and stays. If you play again with an internet connection, the app creates a new anonymous account, starting from zero on the leaderboard.</p>
+
+    <h2>If you no longer have the app</h2>
+    <p>Write to <a href={`mailto:${APP.email}`}>{APP.email}</a> with your nickname and we will delete the account. Or do nothing: an account unused for 12 months is deleted automatically, with all its data.</p>
+
+    <h2>Erase progress from the device</h2>
     <ol>
       <li>Open Selah.</li>
       <li>Tap the gear to open Settings.</li>
-      <li>Tap <strong>Apagar progresso</strong> (Erase progress) and confirm.</li>
+      <li>Tap <strong>Erase progress</strong> and confirm.</li>
     </ol>
-    <p>Stars, completed levels and Temple pieces are erased immediately. Settings (sound, text, reminder) are kept.</p>
-
-    <h2>Erase all data</h2>
-    <p>Uninstall the app. This removes all of Selah's data from the device: progress, collection, settings and gameplay statistics.</p>
+    <p>Stars, completed levels and Temple pieces are erased immediately. Your settings (sound, text, reminder) stay.</p>
+    <p>To erase everything from the device, uninstall the app:</p>
     <ul>
       <li><strong>iPhone:</strong> touch and hold the Selah icon › Remove App › Delete App.</li>
       <li><strong>Android:</strong> touch and hold the Selah icon › App info › Uninstall. To erase without uninstalling: App info › Storage › Clear data.</li>
     </ul>
+    <p>Uninstalling does not delete the leaderboard account on the server. To do that, delete the account in the app before uninstalling, or follow "If you no longer have the app".</p>
 
-    <h2>What is deleted and what is kept</h2>
-    <p>Everything Selah stores is deleted, because it lives only on the device. We keep no copy: there is no retention period and no data kept after deletion.</p>
-    <p>Apple and Google may keep records of your installation under their own policies; those records are not Selah's.</p>
+    <h2>What remains after deletion</h2>
+    <p>Nothing from your account. Only these remain, not linked to it:</p>
+    <ul>
+      <li>the history of moderation decisions (for example, replacing a reported nickname), deleted after 12 months;</li>
+      <li>technical logs from the server provider, for the period in its policy.</li>
+    </ul>
+    <p>Apple and Google may keep records of your installation under their own policies; those records do not belong to Selah.</p>
 
     <h2>Questions</h2>
     <p>Write to <a href={`mailto:${APP.email}`}>{APP.email}</a>. More details in the <a href={ROTAS.privacidade.en}>Privacy Policy</a>.</p>
